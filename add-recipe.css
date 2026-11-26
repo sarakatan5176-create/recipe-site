@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F4F6F8;
+    margin: 0;
+    padding: 1rem;
+}
+
+form {
+    margin: 0 auto;
+    max-width: 600px;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    gap: 16px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.field>label {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+input:not([type="checkbox"], [type="radio"]),
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.optaions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+fieldset {
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #2e5597;
+    outline: none;
+}
+input[type="radio"],input[type="checkbox"]{
+    accent-color: #F4F6F8;
+}
+button{
+    background-color: rgb(159, 48, 48);
+color: white;
+border: none;
+border-radius: 10px;
+font-size: 1rem;
+padding: 5px;
+min-height: 44px;
+cursor: pointer;
+width: 100%;
+}
+button:hover {
+    background-color: #2d1410;
+}
+@media(width>=700px) {
+    form{
+        padding: 2rem;
+    }
+    .row{
+        flex-direction: row;
+    }
+    .row.field{
+        flex: 1;
+    }
+    button{
+        width: auto;
+        align-self: center;
+    }
+}
+/*
+1.* השדות בשורת הפרטים צפופים מדי במסך קטן.
+* הטופס תופס חלק גדול מדי מרוחב המסך.
+2.מ700PX
+חלק ד שאלות
+1. אחרי שלחצתי על הכפתור שמירה הנתונוים שהוזנו בטופס מופיעים בכתובת הדפדפן אחרי הסימן שאלה הנתונים מופרדים באמצעות & והערכים בעיברית מוצגים בקידוד URL כך ניתן לראות שהטופס נשלח בהצלחה!!
+בגלל שהגדרתי בשדה שם המתכון את התכונב: required והדפדפן מזהה שזה שדה חובה ומנע את שליחת הטופס עד שממלאים אותו
+א. `id` מזהה אלמנט ייחודי בעמוד, ואילו `name` מגדיר את שם הנתון שנשלח בטופס. לכפתורי רדיו מאותה קבוצה יש `name` זהה כדי לאפשר בחירה של אפשרות אחת בלבד.
+ב.כתבנו קודם את העיצוב למסך קטן בשיטת Mobile First, כדי להתאים את האתר קודם למכשירים ניידים ולהוסיף בהמשך התאמות למסכים גדולים יותר באמצעות Media Query עם תנאי min-width. אם היינו כותבות לפי הכללים הרגילים עם max-width, היינו צריכות להגדיר תחילה עיצוב למסכים גדולים ואז להוסיף התאמות למסכים קטנים.
+ג.לאחר לחיצה על שליחה נוספו לכתובת הדף סימן שאלה (?) והנתונים שהוזנו בטופס. הדבר מלמד שתכונת NAME מגדירה את שם הנתון שנשלח ואת הערך שלו, כאשר הנתונים מופיעים בכתובת באמצעות GET.
+*/

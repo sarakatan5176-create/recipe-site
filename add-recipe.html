@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="add-recipe.css">
+</head>
+
+<body>
+    <form action="#" method="get">
+        <h1>הוספת מתכון</h1>
+        <div class="field">
+            <label for="title">שם המתכון</label>
+            <input type="text" id="title" name="title" placeholder="לדגומא עוגת שוקולד" required>
+        </div>
+        <fieldset>
+            <legend>סוג המנה</legend>
+            <div class="option">
+                <span class="option">
+                    <label for="meat">בשרי</label>
+                    <input type="radio" id="meat" name="kind" value="meat">
+                </span>
+                <span class="option">
+                    <label for="dairy">חלבי</label>
+                    <input type="radio" id="dairy" name="kind">
+                </span>
+                <span class="option">
+                    <label for="dairy">פרווה</label>
+                    <input type="radio" id="parve" name="kind">
+                </span>
+            </div>
+        </fieldset>
+        <div class="row">
+            <div class="field">
+                <label for="category">קטגוריה</label>
+                <select name="category" id="category">
+                    <option>מרקים</option>
+                    <option>עיקריות</option>
+                    <option>סלטים</option>
+                    <option>מאפים</option>
+                    <option>קינוחים</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="time">זמן הכנה</label>
+                <input type="time" id="time" name="time" value="00:10" max="05:00" required>
+            </div>
+            <div class="field">
+                <label for="servings">מספר מנות</label>
+                <input type="number" name="servings" id="servings" value="4" max="50" min="1">
+            </div>
+        </div>
+
+        <div class="field">
+            <label for="ingredients">מצרכים</label>
+            <textarea name="ingredients" id="ingredients" rows="6" required></textarea>
+        </div>
+        <div class="field">
+            <label for="steps">אופן ההכנה</label>
+            <textarea name="steps" id="steps" rows="6" required></textarea>
+        </div>
+        <fieldset>
+            <legend>מתאים ל...</legend>
+            <div class="option">
+                <span class="option">
+                    <label for="holydays">חגים</label>
+                    <input type="checkbox" name="suitable" id="holydays">
+                </span>
+                <span class="option">
+                    <label for="kids">ילדים</label>
+                    <input type="checkbox" name="suitable" id="kids">
+                </span>
+                <span class="option">
+                    <label for="quick">הכנה מהירה</label>
+                    <input type="checkbox" name="suitable" id="quick">
+                </span>
+            </div>
+        </fieldset>
+        <div class="field">
+            <label for="img">תמונה של המנה</label>
+            <input type="file" accept="image/*">
+        </div>
+        <div class="field">
+            <button>שמירת המתכון</button>
+        </div>
+
+    </form>
+</body>
+
+</html>
