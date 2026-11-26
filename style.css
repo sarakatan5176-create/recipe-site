@@ -1,0 +1,87 @@
+
+body {
+    color: #655653;
+    background-color: #FAF5F0;
+}
+
+h2 {
+    color: #795C61;
+}
+
+#recipe-title {
+    color: #795C61;
+    font-size: 40px;
+}
+
+.highlight {
+    background-color: #F2DDE2;
+}
+
+.intro {
+    color: #655653;
+    font-size: 20px;
+}
+
+.block {
+    background-color: #FFFFFF;
+    width: 700px;
+    box-shadow: 0 2px 8px gray;
+}
+
+#main-image {
+    width: 400px;
+    box-shadow: 0 2px 8px gray;
+}
+
+.side-image {
+    width: 200px;
+    height: 200px;
+}
+
+#nav a:hover {
+    color: #795C61;
+}
+
+.block:hover {
+    box-shadow: 0 6px 14px gray;
+}
+
+.ingredients-list li:first-child {
+    color: #795C61;
+}
+
+.steps-list li:last-child {
+    color: #6F8875;
+}
+
+#info-table {
+    width: 100%;
+}
+
+tbody tr:hover {
+    background-color: #F2DDE2;
+}
+.ingredients-list li::before {
+    content: "-";
+    color: #655653;
+}
+h2::after {
+    content:"✦";
+    color:rgb(231, 168, 52);
+}
+#page-footer p::before {
+       content: "© ";
+}
+.container {
+    width: 900px;
+}
+
+/*
+תשובה א:
+CLASS- עדיף להשתמש בסלקטור אחד שמעצב כבר את כל האזורים זה יוצא יותר קצר
+
+תשובה ב:
+התמונה השנייה נמתחה או התעוותה כי קבענו לה רוחב וגובה קבועים.
+כדי למנוע זאת, נקבע רוחב ונכתוב  
+height: auto כדי לשמור על היחס המקורי.
+*/
